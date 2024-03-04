@@ -4,6 +4,7 @@ import AppContent from './components/AppContent';
 import AppHeader from './components/AppHeader';
 import PageTitle from './components/PageTitle';
 import styles from './styles/modules/app.module.scss';
+import StudentName from './components/StudentName';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <AppHeader />
           <AppContent />
         </div>
+        <StudentName />
       </div>
       <Toaster
         position="bottom-right"
