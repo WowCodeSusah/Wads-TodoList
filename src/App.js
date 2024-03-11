@@ -1,21 +1,25 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
-import AppContent from './components/AppContent';
-import AppHeader from './components/AppHeader';
-import PageTitle from './components/PageTitle';
-import styles from './styles/modules/app.module.scss';
-import StudentName from './components/StudentName';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Reset from './components/Reset';
+import TodoList from './TodoList';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <>
-      <div className="container">
-        <PageTitle>TODO List</PageTitle>
-        <div className={styles.app__wrapper}>
-          <AppHeader />
-          <AppContent />
-        </div>
-        <StudentName />
+      <div className="app">
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route exact path="/todolist" element={<TodoList />} />
+            <Route exact path="/register" element={<Register />} />
+            <Route exact path="/reset" element={<Reset />} />
+            <Route exact path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </Router>
       </div>
       <Toaster
         position="bottom-right"

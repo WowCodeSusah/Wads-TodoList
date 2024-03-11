@@ -32,3 +32,13 @@
     font-size: 1rem;
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerChild {
+  display: none;
+  width: 100%;
+}
